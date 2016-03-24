@@ -1,4 +1,4 @@
-FROM vektorlab/base:latest
+FROM quay.io/vektorcloud/base:latest
 
 ENV DUMB_INIT_VERSION 1.0.0
 
