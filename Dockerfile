@@ -1,4 +1,4 @@
-FROM quay.io/vektorcloud/base:3.4
+FROM quay.io/vektorcloud/base:3.6
 
 ENV DUMB_INIT_VERSION 1.0.0
 
