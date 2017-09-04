@@ -1,11 +1,7 @@
 FROM quay.io/vektorcloud/base:3.6
 
-ENV DUMB_INIT_VERSION 1.0.0
+RUN apk add --no-cache dumb-init && \
+  # Link for compatibility 
+  ln -sv /usr/bin/dumb-init /bin/dumb-init
 
-#build dumb-init
-RUN apk add --no-cache wget tar ca-certificates gcc musl musl-dev make && \
-    cd /tmp; wget https://github.com/Yelp/dumb-init/archive/v${DUMB_INIT_VERSION}.tar.gz && \
-    tar zxf v${DUMB_INIT_VERSION}.tar.gz && \
-    cd dumb-init-${DUMB_INIT_VERSION} && \
-    make && mv -v dumb-init /bin/ && \
-    apk del musl-dev gcc make
+ENTRYPOINT ["/usr/bin/dumb-init", "-v", "--"]
