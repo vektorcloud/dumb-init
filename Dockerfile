@@ -1,4 +1,4 @@
-FROM quay.io/vektorcloud/base:3.6
+FROM quay.io/vektorcloud/base:3.7
 
 RUN apk add --no-cache dumb-init && \
   # Link for compatibility 
