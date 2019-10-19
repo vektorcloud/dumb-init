@@ -1,6 +1,6 @@
 # dumb-init
 
-![circleci][circleci]
+[![circleci][circleci]](https://circleci.com/gh/vektorcloud/dumb-init)
 
 Image build with [dumb-init](https://github.com/Yelp/dumb-init)
 
